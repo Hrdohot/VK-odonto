@@ -18,3 +18,6 @@ Tudo que é provisório tem a marca "Provisório" e comentário `<!-- EDITAR -->
 tratamentos, diferenciais, avaliações do Google, galeria e texto "A clínica".
 Fotos: coloque em `assets/images/` e troque o bloco `.ph` pela tag `<img src="assets/images/arquivo.jpg" alt="descrição" width= height= loading="lazy">`.
 Depois de ter o domínio, adicione `"url"` no JSON-LD do `index.html`.
+
+## Fotos
+Coloque as fotos reais em `assets/images/`. A página foi desenhada para funcionar sem foto; para adicionar uma, inclua `<img src="assets/images/arquivo.jpg" alt="descrição" width="" height="" loading="lazy">` no bloco desejado do `index.html`.
