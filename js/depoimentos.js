@@ -6,5 +6,9 @@ window.DEPOIMENTOS = [
   { nome: "Sergio Dahmer", texto: "Atendimento excelente das doutoras Victoria e Karen! Extremamente atenciosas, prestativas e competentes. O nível de atenção e cuidado é realmente de outro mundo." },
   { nome: "Eveline R", texto: "Recepção calorosa, atenção, cuidado e profissionalismo. Meu filho foi muito bem atendido. Excelente atendimento 😍" },
   { nome: "Gregory Macedo", texto: "A Dra Victoria é uma ótima profissional, muito atenciosa, cuidadosa, gentil, detalhista, rápida e entrega um excelente resultado, com certeza recomendo." },
-  { nome: "Lauriane Dutra", texto: "Profissional excelente, super cuidadosa, detalhista! Incrível trabalho sempre. Eu saio super satisfeita toda vez. Maravilhosa" }
+  { nome: "Lauriane Dutra", texto: "Profissional excelente, super cuidadosa, detalhista! Incrível trabalho sempre. Eu saio super satisfeita toda vez. Maravilhosa" },
+  { nome: "Cristiane Alves", texto: "A Dra Victoria fez uma limpeza que eu nunca havia recebido. Simpática e muito profissional, recomendo de olhos fechados." },
+  { nome: "Riubens Vilela", texto: "Dra Karen e dra Victoria são excelentes profissionais. Tratam seus pacientes com muita atenção, calma e cuidado. Muito cuidadosas com tudo o que fazem. Consultório sofisticado, confortável e limpo." },
+  { nome: "Cristhiane Lima", texto: "Excelente atendimento da Dra. Karen! Muito educada, simpática e atenciosa. A profilaxia foi maravilhosa, realizada com muito cuidado e profissionalismo. Fiquei extremamente satisfeita com o resultado, voltarei!!" },
+  { nome: "Camila Reis", texto: "Melhor limpeza que fiz na vida. Dra Victoria é extremamente cuidadosa e delicada. Recomendo muito pra quem mora no Norte da ilha!" }
 ];

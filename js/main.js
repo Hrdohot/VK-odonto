@@ -11,13 +11,21 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
 } else document.querySelectorAll('.rv').forEach(el => el.classList.add('in'));
 const items = window.DEPOIMENTOS || [], car = document.getElementById('carousel'), track = document.getElementById('track');
 if (items.length) {
-  items.forEach(d => {
-    const c = document.createElement('article'); c.className = 'quote';
+  const card = (d, clone) => {
+    const c = document.createElement('article'); c.className = 'quote'; if (clone) c.setAttribute('aria-hidden', 'true');
+    const n = document.createElement('p'); n.className = 'who'; n.textContent = d.nome;
     const s = document.createElement('p'); s.className = 'stars'; s.textContent = '★★★★★'; s.setAttribute('aria-label', '5 de 5 estrelas');
     const t = document.createElement('p'); t.textContent = d.texto;
-    const n = document.createElement('p'); n.className = 'who'; n.textContent = d.nome;
-    c.append(s, t, n); track.append(c);
-  });
+    c.append(n, s, t); return c;
+  };
+  [0, 1, 2].forEach(i => items.forEach(d => track.append(card(d, i !== 1))));
   car.hidden = false;
-  car.querySelectorAll('button').forEach(b => b.addEventListener('click', () => track.scrollBy({ left: b.dataset.dir * track.clientWidth * .8, behavior: 'smooth' })));
+  const n = items.length, setW = () => track.children[n].offsetLeft - track.children[0].offsetLeft, step = () => track.children[1].offsetLeft - track.children[0].offsetLeft;
+  track.scrollLeft = setW();
+  let timer;
+  track.addEventListener('scroll', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { const w = setW(); if (track.scrollLeft < w * .5) track.scrollLeft += w; else if (track.scrollLeft > w * 1.5) track.scrollLeft -= w; }, 150);
+  });
+  car.querySelectorAll('button').forEach(b => b.addEventListener('click', () => track.scrollBy({ left: b.dataset.dir * step(), behavior: 'smooth' })));
 }
