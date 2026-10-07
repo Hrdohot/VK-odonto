@@ -21,3 +21,6 @@ Depois de ter o domínio, adicione `"url"` no JSON-LD do `index.html`.
 
 ## Fotos
 Coloque as fotos reais em `assets/images/`. A página foi desenhada para funcionar sem foto; para adicionar uma, inclua `<img src="assets/images/arquivo.jpg" alt="descrição" width="" height="" loading="lazy">` no bloco desejado do `index.html`.
+
+## Depoimentos
+Avaliações reais do Google entram em `js/depoimentos.js` (lista `DEPOIMENTOS`). Com a lista vazia, o carrossel fica oculto.
