@@ -29,3 +29,6 @@ if (items.length) {
   });
   car.querySelectorAll('button').forEach(b => b.addEventListener('click', () => track.scrollBy({ left: b.dataset.dir * step(), behavior: 'smooth' })));
 }
+
+const ba = document.getElementById('ba');
+if (ba) { const r = ba.querySelector('input'); r.addEventListener('input', () => ba.style.setProperty('--pos', r.value + '%')); }
