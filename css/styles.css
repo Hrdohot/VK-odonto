@@ -99,3 +99,82 @@ iframe{width:100%;height:220px;border:0;border-radius:var(--r)}
 .doc li{padding:9px 0;border-bottom:1px solid var(--line);color:var(--mut);font-size:.98rem}
 @media(min-width:760px){.docs-grid{grid-template-columns:repeat(2,1fr);gap:56px}}
 @media(min-width:1000px){.docs{padding-top:0}}
+
+/* ===== correções de proporção das fotos ===== */
+.hero-img img,.media img{height:auto}
+.menu-cta{display:none}
+
+/* ===== versão celular / tablet: menu fixo e compacto ===== */
+@media(max-width:999px){
+ .top{position:fixed;transition:background .25s,box-shadow .25s}
+ .top.scrolled,.top:has(#menu.open){background:rgba(251,250,247,.97);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--line)}
+ .bar{height:64px}
+ .burger{width:48px;height:48px;font-size:1.4rem}
+ #menu.open ul{top:68px;left:12px;right:12px;padding:6px 20px 18px;box-shadow:0 14px 34px rgba(31,43,42,.16)}
+ #menu li:not(.menu-cta) a{display:block;padding:15px 0;font-size:1.05rem;border-bottom:1px solid var(--line)}
+ #menu.open .menu-cta{display:block;padding-top:16px}#menu .menu-cta .btn{width:100%}
+}
+
+/* ===== versão celular ===== */
+@media(max-width:759px){
+ body{font-size:1rem;line-height:1.65}
+ .wrap{width:min(100% - 36px,var(--w))}
+ section{padding:56px 0}
+ h2{font-size:clamp(1.65rem,7.4vw,2rem)}
+ .lead{font-size:1.05rem;margin-top:14px}
+ .btns{margin-top:24px}.btns .btn{flex:1 1 100%}
+ .btn.big{padding:0 18px;font-size:1rem}
+
+ /* hero */
+ .hero{padding:88px 0 40px}
+ .hero-grid{gap:28px}
+ h1{font-size:clamp(2.1rem,9.6vw,2.6rem);max-width:none}
+ .hero-img img{max-width:none;aspect-ratio:4/3;object-position:72% 45%;border-radius:18px}
+
+ /* sobre */
+ .two-media{gap:28px}
+ .media{max-width:none}.media img{aspect-ratio:1/1;object-position:50% 18%}
+ .two-media .big{font-size:1.3rem;margin:16px 0 12px}
+
+ /* dentistas */
+ .docs-grid{gap:28px;margin-top:24px}
+ .doc{padding-top:18px}.doc h3{font-size:1.4rem}
+ .doc ul{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+ .doc li{border:1px solid var(--line);border-radius:99px;padding:4px 13px;font-size:.88rem}
+
+ /* tratamentos */
+ .cards{gap:12px;margin-top:28px;grid-template-columns:1fr}
+ .treat{display:grid;grid-template-columns:48px 1fr;column-gap:16px;align-items:center;padding:18px}
+ .treat .ico{grid-row:1/3;margin:0}
+ .treat h3{font-size:1.15rem}.treat p{margin-top:2px;font-size:.92rem;line-height:1.5}
+ .cta-card{padding:26px 22px}.cta-card h3{font-size:1.35rem}.cta-card .btn{width:100%}
+
+ /* resultados */
+ #resultados{padding-top:56px}
+ #resultados h2{margin-bottom:22px}
+ #resultados .ba{aspect-ratio:4/3;max-width:none}
+
+ /* diferenciais */
+ .dif .feats{gap:12px;margin-top:28px;grid-template-columns:1fr}
+ .feat{display:grid;grid-template-columns:30px 1fr;column-gap:16px;align-items:start;padding:18px}
+ .feat svg{grid-row:1/3;margin:2px 0 0}
+ .feat h3{font-size:1.12rem}.feat p{margin-top:2px;font-size:.92rem;line-height:1.5}
+ #resultados+.dif{padding-top:48px}
+
+ /* depoimentos: arrastar para o lado, setas dentro do cartão */
+ .rating{font-size:1.05rem;margin-top:12px}
+ .quote{flex:0 0 92%;padding:22px 22px 76px}
+ .quote .who{font-size:1.15rem}
+ .cbtn{top:auto;bottom:20px;transform:none;width:44px;height:44px;box-shadow:none;border:1.5px solid var(--acc);background:#fff}
+ .cbtn.prev{left:auto;right:calc(8% + 70px)}.cbtn.next{right:calc(8% + 18px)}
+
+ /* chamada final + rodapé */
+ .cta{padding:56px 0 28px}
+ .cta h2{font-size:clamp(1.75rem,8vw,2.1rem)}
+ .foot{gap:32px}
+ .info{width:100%;gap:16px}.info .btn{width:100%}
+ iframe{height:210px}
+ .wa{width:54px;height:54px;right:14px;bottom:14px}.wa svg{width:28px;height:28px}
+ footer,.cta{scroll-margin-top:0}
+}
+@media(max-width:759px){.res{text-align:left}#resultados h2{font-size:clamp(1.5rem,7vw,1.9rem)}}

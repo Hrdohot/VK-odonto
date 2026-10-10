@@ -32,3 +32,6 @@ if (items.length) {
 
 const ba = document.getElementById('ba');
 if (ba) { const r = ba.querySelector('input'); r.addEventListener('input', () => ba.style.setProperty('--pos', r.value + '%')); }
+
+const topbar = document.querySelector('.top');
+if (topbar) { const f = () => topbar.classList.toggle('scrolled', window.scrollY > 16); window.addEventListener('scroll', f, { passive: true }); f(); }
