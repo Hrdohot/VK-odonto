@@ -24,3 +24,6 @@ Coloque as fotos reais em `assets/images/`. A página foi desenhada para funcion
 
 ## Depoimentos
 Avaliações reais do Google entram em `js/depoimentos.js` (lista `DEPOIMENTOS`). Com a lista vazia, o carrossel fica oculto.
+
+## Dentistas (conferir antes de publicar)
+A seção "Quem cuida do seu sorriso" usa dados de exemplo (CRO "00000" e áreas de atuação). Substitua pelos dados reais no bloco `id="dentistas"` do `index.html`.
